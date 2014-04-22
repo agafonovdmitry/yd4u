@@ -18,13 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // center
     QSize sz = size();
     QDesktopWidget *d = QApplication::desktop();
-    int ws = d->width();   // returns screen width
-    int h = d->height();  // returns screen height
-    int mw = sz.width();
-    int mh = sz.height();
-    int cw = (ws/2) - (mw/2);
-    int ch = (h/2) - (mh/2);
-    move(cw,ch);
+    move((d->width() - sz.width()) / 2, (d->height() - sz.height()) / 2);
 
     tray = new QSystemTrayIcon();
     tray->setIcon(QIcon("://images/tray_white_warning.png"));
