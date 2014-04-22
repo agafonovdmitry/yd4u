@@ -1,7 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#define YD4U_TITLE QString::fromUtf8("Яндекс.Диск [UNOFFICIAL]")
+
 #include <QMainWindow>
+#include <QSystemTrayIcon>
 
 namespace Ui {
 class MainWindow;
@@ -14,7 +17,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    
+    QSystemTrayIcon *tray;
+
 private slots:
     void setAllState(bool state);
     void enableAll();

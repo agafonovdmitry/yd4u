@@ -65,9 +65,6 @@
     </disabled>
    </palette>
   </property>
-  <property name="windowTitle">
-   <string>Яндекс.Диск [UNOFFICIAL]</string>
-  </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
     <normaloff>:/images/logo_128.png</normaloff>:/images/logo_128.png</iconset>

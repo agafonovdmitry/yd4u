@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QFileInfo>
 #include <QThread>
+#include <QApplication>
+#include <QDesktopWidget>
 
 QFileInfo cfg("/home/aga/.config/yandex-disk/config.cfg");
 QFileInfo pwd("/home/aga/.config/yandex-disk/passwd");
@@ -11,6 +13,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setWindowTitle(YD4U_TITLE);
+
+    // center
+    QSize sz = size();
+    QDesktopWidget *d = QApplication::desktop();
+    int ws = d->width();   // returns screen width
+    int h = d->height();  // returns screen height
+    int mw = sz.width();
+    int mh = sz.height();
+    int cw = (ws/2) - (mw/2);
+    int ch = (h/2) - (mh/2);
+    move(cw,ch);
+
+    tray = new QSystemTrayIcon();
+    tray->setIcon(QIcon("://images/tray_white_warning.png"));
+    tray->setToolTip(YD4U_TITLE);
+    tray->show();
+
 //    if (pwd.exists()) {
 //        ui->yaLogin->setEnabled(false);
 //    }
