@@ -60,7 +60,11 @@ void MainWindow::on_yaLogin_textChanged(const QString &arg1)
 
 void MainWindow::on_yaPassword_textChanged(const QString &arg1)
 {
-    ui->Start->setEnabled(ui->yaLogin->text().length() > 0 && arg1.length() > 0);
+    bool done = ui->yaLogin->text().length() > 0 && arg1.length() > 0;
+    ui->Start->setEnabled(done);
+    if (done) {
+        tray->setIcon(QIcon("://images/tray_white_ok.png"));
+    }
 }
 
 void MainWindow::on_Start_clicked()

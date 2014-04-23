@@ -3,5 +3,7 @@
         <file>images/mainlogo.png</file>
         <file>images/logo_128.png</file>
         <file>images/tray_white_warning.png</file>
+        <file>images/tray_white_ok.png</file>
+        <file>images/tray_white_sync.png</file>
     </qresource>
 </RCC>
