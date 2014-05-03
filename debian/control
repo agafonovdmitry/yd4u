@@ -1,0 +1,15 @@
+Source: yd4u
+Section: utils
+Priority: extra
+Maintainer: Dmitry Agafonov <AgafonovDmitry@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: https://launchpad.net/yd4u
+Vcs-Git: https://github.com/agafonovdmitry/yd4u.git
+Vcs-Browser: https://github.com/agafonovdmitry/yd4u
+
+Package: yd4u
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: GUI for Yandex.Disk cloud storage client
+ GUI for console client of famous russion cloud storage service Yandex.Disk.
