@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Yandex.Disk
+Name[ru]=Яндекс.Диск
+GenericName=File Synchronizer
+GenericName[ru]=Синхронизация файлов
+Comment=Sync your files across computers and to the web
+Comment=Синхронизирует ваши файлы между компьютерами и в интернет
+Exec=yd4u
+Terminal=false
+Type=Application
+Icon=yd4u
+Categories=Utility;Network;FileTransfer;
+StartupNotify=false

@@ -1,0 +1,3 @@
+yd4u usr/bin
+debian/yd4u.desktop usr/share/applications
+debian/yd4u.xpm usr/share/pixmaps
